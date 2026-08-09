@@ -3,692 +3,1577 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grade 2 Rambutan | Learning Hub</title>
+
+<title>Grade 2 Rambutan | Digital Learning Hub</title>
+
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{
+    --green:#285c3b;
+    --dark:#173b27;
+    --light:#f4f8f2;
+    --mint:#e4f1e4;
+    --yellow:#ffd75a;
+    --white:#ffffff;
+    --text:#26352c;
+    --muted:#6b776f;
+    --shadow:0 8px 25px rgba(0,0,0,.08);
 }
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f8f2;
-    color: #26352b;
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
-/* ================= NAVIGATION ================= */
-nav {
-    background: #245c3a;
-    color: white;
-    padding: 15px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+
+html{
+    scroll-behavior:smooth;
 }
-.logo {
-    font-size: 20px;
-    font-weight: bold;
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:var(--light);
+    color:var(--text);
 }
-nav button {
-    background: transparent;
-    border: none;
-    color: white;
-    margin-left: 15px;
-    cursor: pointer;
-    font-weight: bold;
+
+/* NAVIGATION */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:var(--green);
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
-nav button:hover {
-    color: #ffd95a;
+
+.logo{
+    font-size:20px;
+    font-weight:800;
 }
-/* ================= HOME ================= */
-.hero {
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
+
+.nav-links{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+}
+
+.nav-links button{
+    border:0;
+    background:transparent;
+    color:white;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.nav-links button:hover{
+    background:rgba(255,255,255,.15);
+}
+
+/* HERO */
+
+.hero{
+    min-height:82vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+
     background:
-        linear-gradient(rgba(36,92,58,.90), rgba(36,92,58,.90)),
-        url("classroom.jpg");
-    background-size: cover;
-    background-position: center;
-    color: white;
+    linear-gradient(rgba(23,59,39,.90),rgba(40,92,59,.90)),
+    url("classroom.jpg");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
 }
-.hero h1 {
-    font-size: clamp(45px, 9vw, 90px);
+
+.hero-content{
+    max-width:850px;
 }
-.hero h2 {
-    color: #ffd95a;
-    font-size: clamp(25px, 5vw, 45px);
+
+.rambutan{
+    font-size:75px;
 }
-.hero p {
-    margin: 20px auto;
-    max-width: 650px;
-    font-size: 18px;
+
+.hero h1{
+    font-size:clamp(45px,8vw,78px);
+    letter-spacing:3px;
 }
-.start-btn {
-    border: none;
-    background: #ffd95a;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+
+.hero h2{
+    color:var(--yellow);
+    font-size:clamp(24px,4vw,38px);
+    margin-bottom:15px;
 }
-.start-btn:hover {
-    transform: scale(1.05);
+
+.hero p{
+    font-size:18px;
+    max-width:680px;
+    margin:auto auto 28px;
 }
-/* ================= SECTIONS ================= */
-section {
-    padding: 65px 7%;
+
+.btn{
+    border:0;
+    padding:13px 24px;
+    border-radius:30px;
+    font-weight:700;
+    cursor:pointer;
 }
-.section-title {
-    text-align: center;
-    margin-bottom: 35px;
+
+.primary{
+    background:var(--yellow);
+    color:var(--dark);
 }
-.section-title h2 {
-    color: #245c3a;
-    font-size: 34px;
+
+.secondary{
+    background:var(--green);
+    color:white;
 }
-.section-title p {
-    color: #69756d;
+
+/* SECTIONS */
+
+section{
+    padding:70px 6%;
 }
-/* ================= SUBJECTS ================= */
-.subject-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
 }
-.subject {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
-    cursor: pointer;
-    transition: .25s;
+
+.section-title h2{
+    color:var(--green);
+    font-size:34px;
 }
-.subject:hover {
-    transform: translateY(-7px);
+
+.section-title p{
+    color:var(--muted);
 }
-.subject-icon {
-    font-size: 55px;
+
+/* WELCOME */
+
+.quick-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:20px;
 }
-.subject h3 {
-    margin-top: 10px;
-    color: #245c3a;
+
+.quick-card{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    transition:.25s;
 }
-/* ================= ACTIVITIES ================= */
-#activities {
-    background: #eaf3e7;
+
+.quick-card:hover{
+    transform:translateY(-5px);
 }
-.activity-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+
+.quick-icon{
+    font-size:45px;
 }
-.activity {
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+
+/* TERMS */
+
+.term-section{
+    background:var(--mint);
 }
-.activity h3 {
-    color: #245c3a;
-    margin-bottom: 10px;
+
+.term-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
-.question {
-    margin: 15px 0;
-    font-weight: bold;
+
+.term-card{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    transition:.25s;
 }
-.answer {
-    display: block;
-    width: 100%;
-    padding: 11px;
-    margin: 7px 0;
-    border: 1px solid #ccd8ce;
-    background: #f8faf8;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: left;
+
+.term-card:hover{
+    transform:translateY(-7px);
 }
-.answer:hover {
-    background: #eaf3e7;
+
+.term-number{
+    width:70px;
+    height:70px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--green);
+    color:white;
+    font-size:27px;
+    font-weight:800;
 }
-.answer.correct {
-    background: #b9e7c5;
+
+.term-card h3{
+    color:var(--green);
+    margin:15px 0 8px;
 }
-.answer.wrong {
-    background: #f3c1c1;
+
+.term-card p{
+    color:var(--muted);
 }
-/* ================= SCORE ================= */
-.score-box {
-    max-width: 650px;
-    margin: 40px auto 0;
-    background: #245c3a;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    border-radius: 20px;
+
+/* LEARNING AREAS */
+
+.subject-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
 }
-.score-box h2 {
-    color: #ffd95a;
+
+.subject-card{
+    background:white;
+    padding:28px 20px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    transition:.25s;
 }
-/* ================= TEACHER ================= */
-.teacher {
-    background: white;
+
+.subject-card:hover{
+    transform:translateY(-6px);
 }
-.teacher-card {
-    max-width: 800px;
-    margin: auto;
-    padding: 35px;
-    background: #f4f8f2;
-    border-radius: 25px;
-    text-align: center;
+
+.subject-icon{
+    font-size:55px;
 }
-.teacher-icon {
-    font-size: 80px;
+
+.subject-card h3{
+    color:var(--green);
+    margin:10px 0 5px;
 }
-.teacher-card h2 {
-    color: #245c3a;
+
+.subject-card p{
+    color:var(--muted);
 }
-/* ================= FOOTER ================= */
-footer {
-    background: #183d27;
-    color: white;
-    text-align: center;
-    padding: 30px;
+
+/* ACTIVITIES */
+
+.activities{
+    background:var(--light);
 }
-footer strong {
-    color: #ffd95a;
+
+.term-selector{
+    max-width:900px;
+    margin:0 auto 30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
 }
-/* ================= MOBILE ================= */
-@media(max-width:700px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
+
+.term-button{
+    border:2px solid #d6e3d6;
+    background:white;
+    color:var(--green);
+    padding:15px;
+    border-radius:14px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.term-button.active,
+.term-button:hover{
+    background:var(--green);
+    color:white;
+}
+
+.subject-filter{
+    max-width:900px;
+    margin:0 auto 30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+}
+
+.subject-filter button{
+    border:1px solid #ccd9ce;
+    background:white;
+    padding:9px 14px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.subject-filter button.active{
+    background:var(--green);
+    color:white;
+}
+
+.activity-list{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:20px;
+}
+
+.activity-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.tag{
+    display:inline-block;
+    background:var(--mint);
+    color:var(--green);
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.activity-card h3{
+    color:var(--green);
+    margin-bottom:8px;
+}
+
+.activity-card p{
+    color:var(--muted);
+    margin-bottom:18px;
+}
+
+/* RESOURCES */
+
+.resources{
+    background:white;
+}
+
+.resource-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.resource{
+    border:1px solid #dfe7df;
+    border-radius:20px;
+    padding:25px;
+}
+
+.resource h3{
+    color:var(--green);
+    margin-bottom:8px;
+}
+
+.resource p{
+    color:var(--muted);
+}
+
+/* TEACHER */
+
+.teacher{
+    background:var(--mint);
+}
+
+.teacher-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.teacher-avatar{
+    font-size:70px;
+}
+
+.teacher-box h2{
+    color:var(--green);
+}
+
+/* MOTTO */
+
+.motto{
+    background:var(--green);
+    color:white;
+    text-align:center;
+}
+
+.motto h2{
+    color:var(--yellow);
+    font-size:34px;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:2000;
+    padding:20px;
+    overflow:auto;
+}
+
+.modal-content{
+    max-width:700px;
+    margin:50px auto;
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.modal-content h2{
+    color:var(--green);
+    margin-bottom:10px;
+}
+
+.option{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding:13px;
+    margin:10px 0;
+    border:1px solid #d5dfd6;
+    background:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:var(--mint);
+}
+
+.correct{
+    background:#bce7c6 !important;
+}
+
+.wrong{
+    background:#f3c4c4 !important;
+}
+
+.feedback{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer strong{
+    color:var(--yellow);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
     }
-    nav button {
-        margin: 5px;
+
+    .term-grid{
+        grid-template-columns:1fr;
     }
-    section {
-        padding: 50px 5%;
+
+    .term-selector{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 5%;
+    }
+
+    .modal-content{
+        margin:20px auto;
+        padding:25px;
     }
 }
 </style>
 </head>
+
 <body>
-<!-- ================= NAVIGATION ================= -->
+
+<!-- NAVIGATION -->
+
 <nav>
-    <div class="logo">
-        🌱 Grade 2 – Rambutan
-    </div>
-    <div>
-        <button onclick="goHome()">HOME</button>
-        <button onclick="goActivities()">ACTIVITIES</button>
-        <button onclick="goTeacher()">TEACHER</button>
-    </div>
-</nav>
-<!-- ================= HERO ================= -->
-<div class="hero" id="home">
-    <div>
-        <h1>🌱 RAMBUTAN</h1>
-        <h2>Grade 2 Learning Hub</h2>
-        <p>
-            Welcome to our digital classroom!
-            Learn, practice, play, and discover something new every day.
-        </p>
-        <button class="start-btn" onclick="goActivities()">
-            🎮 START LEARNING
-        </button>
-    </div>
+
+<div class="logo">
+🌱 Grade 2 – Rambutan
 </div>
-<!-- ================= SUBJECTS ================= -->
+
+<div class="nav-links">
+
+<button onclick="go('home')">Home</button>
+<button onclick="go('terms')">Terms</button>
+<button onclick="go('learning')">Learning Areas</button>
+<button onclick="go('activities')">Activities</button>
+<button onclick="go('resources')">Resources</button>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="rambutan">🌱</div>
+
+<h1>RAMBUTAN</h1>
+
+<h2>Grade 2 Digital Learning Hub</h2>
+
+<p>
+Welcome, young learners!
+Explore, practice, play, and learn
+with your Grade 2 Rambutan family.
+</p>
+
+<button class="btn primary"
+onclick="go('terms')">
+
+📚 START LEARNING
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- WELCOME -->
+
 <section>
-    <div class="section-title">
-        <h2>📚 Choose Your Subject</h2>
-        <p>
-            Click a subject and explore your learning activities.
-        </p>
-    </div>
-    <div class="subject-grid">
-        <div class="subject" onclick="filterActivities('Filipino')">
-            <div class="subject-icon">📖</div>
-            <h3>Filipino</h3>
-            <p>Pagbasa at Wika</p>
-        </div>
-        <div class="subject" onclick="filterActivities('English')">
-            <div class="subject-icon">🔤</div>
-            <h3>English</h3>
-            <p>Reading & Language</p>
-        </div>
-        <div class="subject" onclick="filterActivities('Math')">
-            <div class="subject-icon">🔢</div>
-            <h3>Mathematics</h3>
-            <p>Numbers & Problem Solving</p>
-        </div>
-        <div class="subject" onclick="filterActivities('Science')">
-            <div class="subject-icon">🔬</div>
-            <h3>Science</h3>
-            <p>Discover Our World</p>
-        </div>
-        <div class="subject" onclick="filterActivities('AP')">
-            <div class="subject-icon">🌏</div>
-            <h3>Araling Panlipunan</h3>
-            <p>Community & Country</p>
-        </div>
-        <div class="subject" onclick="filterActivities('GMRC')">
-            <div class="subject-icon">❤️</div>
-            <h3>GMRC</h3>
-            <p>Values & Character</p>
-        </div>
-    </div>
+
+<div class="section-title">
+
+<h2>🌟 Welcome, Rambutan Learners!</h2>
+
+<p>
+Choose what you want to explore today.
+</p>
+
+</div>
+
+<div class="quick-grid">
+
+<div class="quick-card"
+onclick="go('terms')">
+
+<div class="quick-icon">📚</div>
+
+<h3>My Learning</h3>
+
+<p>Explore our three learning terms.</p>
+
+</div>
+
+
+<div class="quick-card"
+onclick="go('activities')">
+
+<div class="quick-icon">🎮</div>
+
+<h3>Activities</h3>
+
+<p>Practice through fun activities.</p>
+
+</div>
+
+
+<div class="quick-card"
+onclick="go('resources')">
+
+<div class="quick-icon">📄</div>
+
+<h3>Resources</h3>
+
+<p>Find worksheets and learning materials.</p>
+
+</div>
+
+
+<div class="quick-card"
+onclick="go('teacher')">
+
+<div class="quick-icon">👨‍🏫</div>
+
+<h3>My Teacher</h3>
+
+<p>Meet Sir Sonny.</p>
+
+</div>
+
+</div>
+
 </section>
-<!-- ================= ACTIVITIES ================= -->
-<section id="activities">
-    <div class="section-title">
-        <h2>🎮 Interactive Activities</h2>
-        <p>
-            Choose an answer and see your result instantly!
-        </p>
-    </div>
-    <div class="activity-grid">
-        <!-- FILIPINO 1 -->
-        <div class="activity" data-subject="Filipino">
-            <h3>📖 Filipino – Pantig</h3>
-            <div class="question">
-                Alin ang tamang paghahati sa pantig ng "bata"?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. ba-ta
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. bat-a
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. b-ata
-            </button>
-        </div>
-        <!-- FILIPINO 2 -->
-        <div class="activity" data-subject="Filipino">
-            <h3>📖 Filipino – Salita</h3>
-            <div class="question">
-                Alin ang pangalan ng hayop?
-            </div>
-            <button class="answer" onclick="check(this,false)">
-                A. mesa
-            </button>
-            <button class="answer" onclick="check(this,true)">
-                B. aso
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. lapis
-            </button>
-        </div>
-        <!-- FILIPINO 3 -->
-        <div class="activity" data-subject="Filipino">
-            <h3>📖 Filipino – Pangungusap</h3>
-            <div class="question">
-                Alin ang tamang pangungusap?
-            </div>
-            <button class="answer" onclick="check(this,false)">
-                A. Ang masaya bata.
-            </button>
-            <button class="answer" onclick="check(this,true)">
-                B. Masaya ang bata.
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Bata masaya ang.
-            </button>
-        </div>
-        <!-- ENGLISH 1 -->
-        <div class="activity" data-subject="English">
-            <h3>🔤 English – Vocabulary</h3>
-            <div class="question">
-                Which one is an animal?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Cat
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Chair
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Pencil
-            </button>
-        </div>
-        <!-- ENGLISH 2 -->
-        <div class="activity" data-subject="English">
-            <h3>🔤 English – Opposites</h3>
-            <div class="question">
-                What is the opposite of BIG?
-            </div>
-            <button class="answer" onclick="check(this,false)">
-                A. Tall
-            </button>
-            <button class="answer" onclick="check(this,true)">
-                B. Small
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Long
-            </button>
-        </div>
-        <!-- ENGLISH 3 -->
-        <div class="activity" data-subject="English">
-            <h3>🔤 English – Reading</h3>
-            <div class="question">
-                Ana has a red ball. What color is her ball?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Red
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Blue
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Green
-            </button>
-        </div>
-        <!-- MATH 1 -->
-        <div class="activity" data-subject="Math">
-            <h3>🔢 Math – Addition</h3>
-            <div class="question">
-                What is 8 + 7?
-            </div>
-            <button class="answer" onclick="check(this,false)">
-                A. 13
-            </button>
-            <button class="answer" onclick="check(this,true)">
-                B. 15
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. 17
-            </button>
-        </div>
-        <!-- MATH 2 -->
-        <div class="activity" data-subject="Math">
-            <h3>🔢 Math – Subtraction</h3>
-            <div class="question">
-                What is 15 − 6?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. 9
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. 8
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. 7
-            </button>
-        </div>
-        <!-- MATH 3 -->
-        <div class="activity" data-subject="Math">
-            <h3>🔢 Math – Place Value</h3>
-            <div class="question">
-                In 45, what is the value of 4?
-            </div>
-            <button class="answer" onclick="check(this,false)">
-                A. 4 ones
-            </button>
-            <button class="answer" onclick="check(this,true)">
-                B. 4 tens
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. 40 ones
-            </button>
-        </div>
-        <!-- SCIENCE 1 -->
-        <div class="activity" data-subject="Science">
-            <h3>🔬 Science – Living Things</h3>
-            <div class="question">
-                Which is a living thing?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Dog
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Chair
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Rock
-            </button>
-        </div>
-        <!-- SCIENCE 2 -->
-        <div class="activity" data-subject="Science">
-            <h3>🌱 Science – Plants</h3>
-            <div class="question">
-                Which part of a plant usually absorbs water?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Roots
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Flower
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Fruit
-            </button>
-        </div>
-        <!-- SCIENCE 3 -->
-        <div class="activity" data-subject="Science">
-            <h3>🐶 Science – Animals</h3>
-            <div class="question">
-                Which animal can fly?
-            </div>
-            <button class="answer" onclick="check(this,false)">
-                A. Dog
-            </button>
-            <button class="answer" onclick="check(this,true)">
-                B. Bird
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Fish
-            </button>
-        </div>
-        <!-- AP 1 -->
-        <div class="activity" data-subject="AP">
-            <h3>🌏 AP – Family</h3>
-            <div class="question">
-                Who usually takes care of children at home?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Family
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Stranger
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Driver
-            </button>
-        </div>
-        <!-- AP 2 -->
-        <div class="activity" data-subject="AP">
-            <h3>🏘️ AP – Community</h3>
-            <div class="question">
-                Who helps keep our community safe?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Police officer
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Student
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Baby
-            </button>
-        </div>
-        <!-- AP 3 -->
-        <div class="activity" data-subject="AP">
-            <h3>🇵🇭 AP – Country</h3>
-            <div class="question">
-                What is the name of our country?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Philippines
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Japan
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Canada
-            </button>
-        </div>
-        <!-- GMRC 1 -->
-        <div class="activity" data-subject="GMRC">
-            <h3>❤️ GMRC – Respect</h3>
-            <div class="question">
-                What should you say when someone helps you?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Thank you
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Go away
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Nothing
-            </button>
-        </div>
-        <!-- GMRC 2 -->
-        <div class="activity" data-subject="GMRC">
-            <h3>❤️ GMRC – Honesty</h3>
-            <div class="question">
-                You found a pencil that is not yours. What should you do?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Return it to its owner
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Keep it
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Hide it
-            </button>
-        </div>
-        <!-- GMRC 3 -->
-        <div class="activity" data-subject="GMRC">
-            <h3>❤️ GMRC – Kindness</h3>
-            <div class="question">
-                What should you do when a classmate needs help?
-            </div>
-            <button class="answer" onclick="check(this,true)">
-                A. Help when you can
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                B. Laugh at them
-            </button>
-            <button class="answer" onclick="check(this,false)">
-                C. Ignore them
-            </button>
-        </div>
-    </div>
-    <!-- SCORE -->
-    <div class="score-box">
-        <h2>🌟 Your Learning Score</h2>
-        <p>
-            Correct Answers:
-            <strong id="score">0</strong>
-        </p>
-        <p>
-            Keep learning and keep shining, Rambutan Learner! 🌱
-        </p>
-    </div>
+
+
+<!-- THREE TERMS -->
+
+<section class="term-section" id="terms">
+
+<div class="section-title">
+
+<h2>📅 Our Three Learning Terms</h2>
+
+<p>
+Choose a term to explore your lessons and activities.
+</p>
+
+</div>
+
+<div class="term-grid">
+
+<div class="term-card"
+onclick="chooseTerm(1)">
+
+<div class="term-number">1</div>
+
+<h3>Term 1</h3>
+
+<p>
+Let's begin our learning journey!
+</p>
+
+</div>
+
+
+<div class="term-card"
+onclick="chooseTerm(2)">
+
+<div class="term-number">2</div>
+
+<h3>Term 2</h3>
+
+<p>
+Let's practice and discover more!
+</p>
+
+</div>
+
+
+<div class="term-card"
+onclick="chooseTerm(3)">
+
+<div class="term-number">3</div>
+
+<h3>Term 3</h3>
+
+<p>
+Let's apply what we have learned!
+</p>
+
+</div>
+
+</div>
+
 </section>
-<!-- ================= TEACHER ================= -->
+
+
+<!-- LEARNING AREAS -->
+
+<section id="learning">
+
+<div class="section-title">
+
+<h2>📚 Learning Areas</h2>
+
+<p>
+Choose a subject to explore.
+</p>
+
+</div>
+
+<div class="subject-grid">
+
+<div class="subject-card"
+onclick="chooseSubject('Filipino')">
+
+<div class="subject-icon">🇵🇭</div>
+
+<h3>Filipino</h3>
+
+<p>Wika, pagbasa at pagsulat</p>
+
+</div>
+
+
+<div class="subject-card"
+onclick="chooseSubject('English')">
+
+<div class="subject-icon">🔤</div>
+
+<h3>English</h3>
+
+<p>Reading, language and communication</p>
+
+</div>
+
+
+<div class="subject-card"
+onclick="chooseSubject('Mathematics')">
+
+<div class="subject-icon">🔢</div>
+
+<h3>Mathematics</h3>
+
+<p>Numbers and problem solving</p>
+
+</div>
+
+
+<div class="subject-card"
+onclick="chooseSubject('Makabansa')">
+
+<div class="subject-icon">🌏</div>
+
+<h3>Makabansa</h3>
+
+<p>Self, family, community and country</p>
+
+</div>
+
+
+<div class="subject-card"
+onclick="chooseSubject('GMRC')">
+
+<div class="subject-icon">❤️</div>
+
+<h3>GMRC</h3>
+
+<p>Good manners and right conduct</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+
+<section class="activities" id="activities">
+
+<div class="section-title">
+
+<h2>🎮 Learning Activities</h2>
+
+<p>
+Select a term and learning area.
+</p>
+
+</div>
+
+
+<div class="term-selector">
+
+<button class="term-button active"
+onclick="setTerm(1,this)">
+Term 1
+</button>
+
+<button class="term-button"
+onclick="setTerm(2,this)">
+Term 2
+</button>
+
+<button class="term-button"
+onclick="setTerm(3,this)">
+Term 3
+</button>
+
+</div>
+
+
+<div class="subject-filter">
+
+<button class="active"
+onclick="setSubject('All',this)">
+All
+</button>
+
+<button onclick="setSubject('Filipino',this)">
+Filipino
+</button>
+
+<button onclick="setSubject('English',this)">
+English
+</button>
+
+<button onclick="setSubject('Mathematics',this)">
+Mathematics
+</button>
+
+<button onclick="setSubject('Makabansa',this)">
+Makabansa
+</button>
+
+<button onclick="setSubject('GMRC',this)">
+GMRC
+</button>
+
+</div>
+
+
+<div class="activity-list">
+
+
+<!-- TERM 1 -->
+
+<div class="activity-card"
+data-term="1"
+data-subject="Filipino">
+
+<span class="tag">TERM 1 • FILIPINO</span>
+
+<h3>📖 Pantig Detective</h3>
+
+<p>
+Practice identifying syllables in Filipino words.
+</p>
+
+<button class="btn secondary"
+onclick="activity('pantig')">
+Start
+</button>
+
+</div>
+
+
+<div class="activity-card"
+data-term="1"
+data-subject="English">
+
+<span class="tag">TERM 1 • ENGLISH</span>
+
+<h3>🔤 Word Detective</h3>
+
+<p>
+Find the word that matches the description.
+</p>
+
+<button class="btn secondary"
+onclick="activity('word')">
+Start
+</button>
+
+</div>
+
+
+<div class="activity-card"
+data-term="1"
+data-subject="Mathematics">
+
+<span class="tag">TERM 1 • MATHEMATICS</span>
+
+<h3>🔢 Number Challenge</h3>
+
+<p>
+Practice numbers and basic operations.
+</p>
+
+<button class="btn secondary"
+onclick="activity('math')">
+Start
+</button>
+
+</div>
+
+
+<div class="activity-card"
+data-term="1"
+data-subject="Makabansa">
+
+<span class="tag">TERM 1 • MAKABANSA</span>
+
+<h3>🌏 My Community</h3>
+
+<p>
+Learn about people and places in your community.
+</p>
+
+<button class="btn secondary"
+onclick="activity('community')">
+Start
+</button>
+
+</div>
+
+
+<div class="activity-card"
+data-term="1"
+data-subject="GMRC">
+
+<span class="tag">TERM 1 • GMRC</span>
+
+<h3>❤️ Good Choice</h3>
+
+<p>
+Choose the kind and responsible action.
+</p>
+
+<button class="btn secondary"
+onclick="activity('gmrc')">
+Start
+</button>
+
+</div>
+
+
+<!-- TERM 2 -->
+
+<div class="activity-card"
+data-term="2"
+data-subject="Mathematics">
+
+<span class="tag">TERM 2 • MATHEMATICS</span>
+
+<h3>🧮 Math Explorer</h3>
+
+<p>
+Solve a mathematical challenge.
+</p>
+
+<button class="btn secondary"
+onclick="activity('math2')">
+Start
+</button>
+
+</div>
+
+
+<div class="activity-card"
+data-term="2"
+data-subject="English">
+
+<span class="tag">TERM 2 • ENGLISH</span>
+
+<h3>📚 Reading Explorer</h3>
+
+<p>
+Read and answer a simple question.
+</p>
+
+<button class="btn secondary"
+onclick="activity('reading')">
+Start
+</button>
+
+</div>
+
+
+<!-- TERM 3 -->
+
+<div class="activity-card"
+data-term="3"
+data-subject="Filipino">
+
+<span class="tag">TERM 3 • FILIPINO</span>
+
+<h3>✏️ Salita Challenge</h3>
+
+<p>
+Practice identifying the correct Filipino word.
+</p>
+
+<button class="btn secondary"
+onclick="activity('salita')">
+Start
+</button>
+
+</div>
+
+
+<div class="activity-card"
+data-term="3"
+data-subject="GMRC">
+
+<span class="tag">TERM 3 • GMRC</span>
+
+<h3>❤️ Kindness Challenge</h3>
+
+<p>
+Think about how you can help others.
+</p>
+
+<button class="btn secondary"
+onclick="activity('kindness')">
+Start
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESOURCES -->
+
+<section class="resources" id="resources">
+
+<div class="section-title">
+
+<h2>📁 Learning Resources</h2>
+
+<p>
+Your teacher can place downloadable files here.
+</p>
+
+</div>
+
+<div class="resource-grid">
+
+<div class="resource">
+
+<h3>📄 Activity Sheets</h3>
+
+<p>
+Printable worksheets and practice activities.
+</p>
+
+<br>
+
+<button class="btn secondary"
+onclick="resourceMessage()">
+Open
+</button>
+
+</div>
+
+
+<div class="resource">
+
+<h3>📚 Lesson Materials</h3>
+
+<p>
+Learning materials prepared for Rambutan learners.
+</p>
+
+<br>
+
+<button class="btn secondary"
+onclick="resourceMessage()">
+Open
+</button>
+
+</div>
+
+
+<div class="resource">
+
+<h3>📖 Reading Corner</h3>
+
+<p>
+Stories and reading materials.
+</p>
+
+<br>
+
+<button class="btn secondary"
+onclick="resourceMessage()">
+Read
+</button>
+
+</div>
+
+
+<div class="resource">
+
+<h3>🎥 Learning Videos</h3>
+
+<p>
+Teacher-selected videos for learning.
+</p>
+
+<br>
+
+<button class="btn secondary"
+onclick="resourceMessage()">
+Watch
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TEACHER -->
+
 <section class="teacher" id="teacher">
-    <div class="section-title">
-        <h2>👨‍🏫 Your Teacher</h2>
-    </div>
-    <div class="teacher-card">
-        <div class="teacher-icon">
-            👨‍🏫
-        </div>
-        <h2>
-            Sir Sonny, Jr. L. Reño
-        </h2>
-        <p>
-            Grade 2 – Rambutan Class Adviser
-        </p>
-        <br>
-        <p>
-            "Every learner can learn, grow, and shine."
-        </p>
-    </div>
+
+<div class="section-title">
+
+<h2>👨‍🏫 Your Teacher</h2>
+
+</div>
+
+<div class="teacher-box">
+
+<div class="teacher-avatar">
+👨‍🏫
+</div>
+
+<h2>Sir Sonny, Jr. L. Reño</h2>
+
+<p>
+Grade 2 – Rambutan Class Adviser
+</p>
+
+<br>
+
+<p>
+Welcome to our digital classroom!
+Let's learn, explore, help one another,
+and grow together.
+</p>
+
+</div>
+
 </section>
-<!-- ================= FOOTER ================= -->
+
+
+<!-- MOTTO -->
+
+<section class="motto">
+
+<h2>🌱 Grow, Learn, Shine!</h2>
+
+<p>
+Learn with curiosity • Grow with kindness •
+Shine with confidence
+</p>
+
+</section>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<button class="close"
+onclick="closeModal()">
+×
+</button>
+
+<h2 id="modalTitle">
+Activity
+</h2>
+
+<p id="modalInstruction">
+Choose the best answer.
+</p>
+
+<div id="question"></div>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
 <footer>
-    <p>
-        <strong>Grade 2 – Rambutan Learning Hub</strong>
-    </p>
-    <p>
-        Class Adviser: Sir Sonny, Jr. L. Reño
-    </p>
-    <br>
-    <p>
-        © 2026 Rambutan Digital Classroom
-    </p>
+
+<p>
+<strong>Grade 2 – Rambutan Digital Learning Hub</strong>
+</p>
+
+<p>
+Class Adviser: Sir Sonny, Jr. L. Reño
+</p>
+
+<br>
+
+<p>
+© 2026 Grade 2 – Rambutan
+</p>
+
 </footer>
+
+
 <script>
-/* ================= SCORE SYSTEM ================= */
-let score = 0;
-/* Check answer */
-function check(button, correct) {
-    /*
-       Prevent clicking the same question repeatedly.
-    */
-    const parent = button.parentElement;
-    if (parent.dataset.completed === "true") {
-        return;
-    }
-    parent.dataset.completed = "true";
-    if (correct) {
-        button.classList.add("correct");
-        score++;
-        document.getElementById("score").textContent = score;
-        setTimeout(function() {
-            alert("🎉 Excellent! Great job, Rambutan Learner!");
-        }, 100);
-    } else {
-        button.classList.add("wrong");
-        setTimeout(function() {
-            alert("😊 Nice try! Keep learning!");
-        }, 100);
-    }
+
+/* NAVIGATION */
+
+function go(id){
+
+document.getElementById(id)
+.scrollIntoView({
+behavior:"smooth"
+});
+
 }
-/* ================= NAVIGATION ================= */
-function goHome() {
-    document.getElementById("home")
-        .scrollIntoView({behavior:"smooth"});
+
+
+/* CURRENT SETTINGS */
+
+let currentTerm = 1;
+let currentSubject = "All";
+
+
+/* CHOOSE TERM */
+
+function chooseTerm(term){
+
+currentTerm = term;
+
+go("activities");
+
+document.querySelectorAll(".term-button")
+.forEach((button,index)=>{
+
+button.classList.toggle(
+"active",
+index === term-1
+);
+
+});
+
+filterActivities();
+
 }
-function goActivities() {
-    document.getElementById("activities")
-        .scrollIntoView({behavior:"smooth"});
+
+
+/* SET TERM */
+
+function setTerm(term,button){
+
+currentTerm = term;
+
+document.querySelectorAll(".term-button")
+.forEach(btn =>
+btn.classList.remove("active")
+);
+
+button.classList.add("active");
+
+filterActivities();
+
 }
-function goTeacher() {
-    document.getElementById("teacher")
-        .scrollIntoView({behavior:"smooth"});
+
+
+/* CHOOSE SUBJECT */
+
+function chooseSubject(subject){
+
+currentSubject = subject;
+
+go("activities");
+
+document.querySelectorAll(".subject-filter button")
+.forEach(button=>{
+button.classList.remove("active");
+
+if(button.textContent.trim() === subject){
+button.classList.add("active");
 }
-/* ================= SUBJECT FILTER ================= */
-function filterActivities(subject) {
-    const activities =
-        document.querySelectorAll(".activity");
-    activities.forEach(function(activity) {
-        if (activity.dataset.subject === subject) {
-            activity.style.display = "block";
-        } else {
-            activity.style.display = "none";
-        }
-    });
-    document.getElementById("activities")
-        .scrollIntoView({behavior:"smooth"});
+
+});
+
+filterActivities();
+
 }
+
+
+/* SET SUBJECT */
+
+function setSubject(subject,button){
+
+currentSubject = subject;
+
+document.querySelectorAll(".subject-filter button")
+.forEach(btn =>
+btn.classList.remove("active")
+);
+
+button.classList.add("active");
+
+filterActivities();
+
+}
+
+
+/* FILTER */
+
+function filterActivities(){
+
+document.querySelectorAll(".activity-card")
+.forEach(card=>{
+
+let termMatch =
+Number(card.dataset.term) === currentTerm;
+
+let subjectMatch =
+currentSubject === "All" ||
+card.dataset.subject === currentSubject;
+
+card.style.display =
+termMatch && subjectMatch
+? "block"
+: "none";
+
+});
+
+}
+
+
+/* ACTIVITIES */
+
+const activities = {
+
+pantig:{
+title:"📖 Pantig Detective",
+instruction:"Ano ang tamang paghahati sa pantig ng salitang BATA?",
+options:[
+["ba-ta",true],
+["bat-a",false],
+["b-ata",false]
+]
+},
+
+word:{
+title:"🔤 Word Detective",
+instruction:"Which word is an animal?",
+options:[
+["Table",false],
+["Dog",true],
+["Pencil",false]
+]
+},
+
+math:{
+title:"🔢 Number Challenge",
+instruction:"What is 8 + 7?",
+options:[
+["13",false],
+["15",true],
+["17",false]
+]
+},
+
+community:{
+title:"🌏 My Community",
+instruction:"Who helps keep the community safe?",
+options:[
+["Police officer",true],
+["Baby",false],
+["Pupil",false]
+]
+},
+
+gmrc:{
+title:"❤️ Good Choice",
+instruction:"You found a pencil belonging to your classmate. What should you do?",
+options:[
+["Keep it",false],
+["Hide it",false],
+["Return it",true]
+]
+},
+
+math2:{
+title:"🧮 Math Explorer",
+instruction:"What is 20 + 10?",
+options:[
+["20",false],
+["30",true],
+["40",false]
+]
+},
+
+reading:{
+title:"📚 Reading Explorer",
+instruction:"Ana has a red ball. What does Ana have?",
+options:[
+["A blue bag",false],
+["A red ball",true],
+["A yellow book",false]
+]
+},
+
+salita:{
+title:"✏️ Salita Challenge",
+instruction:"Alin ang pangalan ng isang hayop?",
+options:[
+["Aso",true],
+["Mesa",false],
+["Bahay",false]
+]
+},
+
+kindness:{
+title:"❤️ Kindness Challenge",
+instruction:"Your classmate is having difficulty with an activity. What can you do?",
+options:[
+["Laugh at them",false],
+["Ignore them",false],
+["Help and encourage them",true]
+]
+}
+
+};
+
+
+/* OPEN ACTIVITY */
+
+function activity(type){
+
+let a = activities[type];
+
+document.getElementById("modalTitle")
+.textContent = a.title;
+
+document.getElementById("modalInstruction")
+.textContent = a.instruction;
+
+let q =
+document.getElementById("question");
+
+q.innerHTML="";
+
+a.options.forEach(option=>{
+
+let button =
+document.createElement("button");
+
+button.className="option";
+
+button.textContent=option[0];
+
+button.onclick=function(){
+
+if(button.dataset.done)
+return;
+
+button.dataset.done="true";
+
+let feedback =
+document.createElement("div");
+
+feedback.className="feedback";
+
+if(option[1]){
+
+button.classList.add("correct");
+
+feedback.textContent =
+"🎉 Excellent! Great job!";
+
+}else{
+
+button.classList.add("wrong");
+
+feedback.textContent =
+"😊 Nice try! Keep thinking!";
+
+}
+
+q.appendChild(feedback);
+
+};
+
+q.appendChild(button);
+
+});
+
+document.getElementById("modal")
+.style.display="block";
+
+}
+
+
+/* CLOSE */
+
+function closeModal(){
+
+document.getElementById("modal")
+.style.display="none";
+
+}
+
+
+/* RESOURCES */
+
+function resourceMessage(){
+
+alert(
+"📚 Your teacher's learning resources will appear here."
+);
+
+}
+
+
+/* CLOSE OUTSIDE */
+
+window.onclick=function(event){
+
+let modal =
+document.getElementById("modal");
+
+if(event.target === modal){
+closeModal();
+}
+
+};
+
+
+/* INITIAL */
+
+filterActivities();
+
 </script>
+
 </body>
 </html>
