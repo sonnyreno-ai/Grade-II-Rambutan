@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,802 +7,635 @@
 <title>Grade 2 Rambutan | Digital Learning Hub</title>
 
 <style>
-
-/* =========================
-   GENERAL
-========================= */
-
-:root {
-    --green: #285c3b;
-    --dark-green: #173b27;
-    --light-green: #e8f3e8;
-    --very-light: #f6faf5;
-    --yellow: #ffd75a;
-    --white: #ffffff;
-    --text: #26352c;
-    --gray: #6d776f;
-    --border: #dce7dd;
-    --shadow: 0 8px 25px rgba(0,0,0,0.08);
+:root{
+    --green:#285c3b;
+    --dark:#173b27;
+    --light:#eaf4ea;
+    --cream:#f8fbf7;
+    --yellow:#ffd75a;
+    --white:#ffffff;
+    --text:#26352c;
+    --gray:#68736b;
+    --border:#dce8de;
+    --shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: var(--very-light);
-    color: var(--text);
-    line-height: 1.6;
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.6;
 }
 
+/* NAVIGATION */
 
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: var(--green);
-    color: white;
-
-    padding: 15px 6%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:var(--green);
+    color:white;
+    padding:14px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: 800;
+.logo{
+    font-size:20px;
+    font-weight:800;
 }
 
-.nav-links {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
+.nav-links{
+    display:flex;
+    gap:5px;
+    flex-wrap:wrap;
 }
 
-.nav-links button {
-    border: none;
-    background: transparent;
-    color: white;
-
-    padding: 8px 12px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-    font-weight: 600;
+.nav-links button{
+    border:0;
+    background:transparent;
+    color:white;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
 }
 
-.nav-links button:hover {
-    background: rgba(255,255,255,0.15);
+.nav-links button:hover{
+    background:rgba(255,255,255,.15);
 }
 
+/* HERO */
 
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 80vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 60px 20px;
-
-    background:
-        linear-gradient(
-            rgba(23,59,39,0.90),
-            rgba(40,92,59,0.90)
-        );
-
-    color: white;
+.hero{
+    min-height:78vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(
+        rgba(23,59,39,.93),
+        rgba(40,92,59,.90)
+    );
+    color:white;
 }
 
-.hero-content {
-    max-width: 850px;
+.hero-content{
+    max-width:850px;
 }
 
-.rambutan {
-    font-size: 75px;
-    margin-bottom: 10px;
+.hero-icon{
+    font-size:70px;
+    margin-bottom:10px;
 }
 
-.hero h1 {
-    font-size: clamp(45px, 8vw, 80px);
-    letter-spacing: 4px;
+.hero h1{
+    font-size:clamp(45px,8vw,80px);
+    letter-spacing:4px;
 }
 
-.hero h2 {
-    color: var(--yellow);
-    font-size: clamp(24px, 4vw, 38px);
-    margin-bottom: 15px;
+.hero h2{
+    color:var(--yellow);
+    font-size:clamp(24px,4vw,38px);
+    margin-bottom:15px;
 }
 
-.hero p {
-    font-size: 18px;
-    max-width: 680px;
-    margin: 0 auto 28px;
+.hero p{
+    font-size:18px;
+    max-width:680px;
+    margin:0 auto 28px;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn {
-    border: none;
-
-    padding: 13px 24px;
-
-    border-radius: 30px;
-
-    font-weight: 700;
-
-    cursor: pointer;
+.btn{
+    border:0;
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
 }
 
-.primary {
-    background: var(--yellow);
-    color: var(--dark-green);
+.btn:hover{
+    transform:translateY(-2px);
 }
 
-.secondary {
-    background: var(--green);
-    color: white;
+.primary{
+    background:var(--yellow);
+    color:var(--dark);
 }
 
-.btn:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
+.secondary{
+    background:var(--green);
+    color:white;
 }
 
+/* SECTIONS */
 
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-    padding: 70px 6%;
+section{
+    padding:70px 6%;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
 }
 
-.section-title h2 {
-    color: var(--green);
-    font-size: 34px;
+.section-title h2{
+    color:var(--green);
+    font-size:34px;
 }
 
-.section-title p {
-    color: var(--gray);
+.section-title p{
+    color:var(--gray);
 }
 
+/* QUICK CARDS */
 
-/* =========================
-   QUICK CARDS
-========================= */
-
-.quick-grid {
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(210px, 1fr));
-
-    gap: 20px;
+.quick-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.quick-card {
-    background: white;
-
-    padding: 28px;
-
-    border-radius: 20px;
-
-    text-align: center;
-
-    box-shadow: var(--shadow);
-
-    cursor: pointer;
-
-    transition: 0.25s;
+.quick-card{
+    background:white;
+    padding:25px 20px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    transition:.25s;
+    border:1px solid var(--border);
 }
 
-.quick-card:hover {
-    transform: translateY(-5px);
+.quick-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
 }
 
-.quick-icon {
-    font-size: 45px;
+/* NEW QUICK ICONS */
+
+.quick-icon{
+    width:82px;
+    height:82px;
+    margin:0 auto 15px;
+    border-radius:22px;
+    background:var(--light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:43px;
+    overflow:hidden;
 }
 
-.quick-card h3 {
-    color: var(--green);
-    margin: 10px 0;
+.quick-icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-.quick-card p {
-    color: var(--gray);
+.quick-card h3{
+    color:var(--green);
+    margin-bottom:6px;
 }
 
-
-/* =========================
-   TERMS
-========================= */
-
-.term-section {
-    background: var(--light-green);
+.quick-card p{
+    color:var(--gray);
+    font-size:14px;
 }
 
-.term-grid {
-    max-width: 1100px;
+/* TERMS */
 
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
+.term-section{
+    background:var(--light);
 }
 
-.term-card {
-    background: white;
-
-    border-radius: 25px;
-
-    padding: 30px;
-
-    text-align: center;
-
-    box-shadow: var(--shadow);
-
-    cursor: pointer;
-
-    transition: 0.25s;
+.term-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.term-card:hover {
-    transform: translateY(-7px);
+.term-card{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    transition:.25s;
 }
 
-.term-number {
-    width: 70px;
-    height: 70px;
-
-    margin: auto;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--green);
-
-    color: white;
-
-    font-size: 27px;
-    font-weight: 800;
+.term-card:hover{
+    transform:translateY(-7px);
 }
 
-.term-card h3 {
-    color: var(--green);
-    margin: 15px 0 8px;
+.term-number{
+    width:70px;
+    height:70px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--green);
+    color:white;
+    font-size:27px;
+    font-weight:800;
 }
 
-.term-card p {
-    color: var(--gray);
+.term-card h3{
+    color:var(--green);
+    margin:15px 0 8px;
 }
 
-
-/* =========================
-   LEARNING AREAS
-========================= */
-
-.subject-grid {
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(200px, 1fr));
-
-    gap: 20px;
+.term-card p{
+    color:var(--gray);
 }
 
-.subject-card {
-    background: white;
+/* LEARNING AREAS */
 
-    padding: 28px 20px;
-
-    border-radius: 22px;
-
-    text-align: center;
-
-    box-shadow: var(--shadow);
-
-    cursor: pointer;
-
-    transition: 0.25s;
+.subject-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
 }
 
-.subject-card:hover {
-    transform: translateY(-6px);
+.subject-card{
+    background:white;
+    padding:25px 15px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    transition:.25s;
+    border:1px solid var(--border);
 }
 
-.subject-icon {
-    font-size: 55px;
+.subject-card:hover{
+    transform:translateY(-6px);
 }
 
-.subject-card h3 {
-    color: var(--green);
-    margin: 10px 0 5px;
+.subject-icon{
+    font-size:50px;
 }
 
-.subject-card p {
-    color: var(--gray);
+.subject-card h3{
+    color:var(--green);
+    margin:8px 0 5px;
 }
 
-
-/* =========================
-   ACTIVITIES
-========================= */
-
-.activities {
-    background: var(--very-light);
+.subject-card p{
+    color:var(--gray);
+    font-size:13px;
 }
 
-.term-selector {
-    max-width: 900px;
+/* ACTIVITIES */
 
-    margin: 0 auto 30px;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 12px;
+.activities{
+    background:var(--cream);
 }
 
-.term-button {
-    border: 2px solid var(--border);
+.term-selector{
+    max-width:900px;
+    margin:0 auto 25px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
 
-    background: white;
-
-    color: var(--green);
-
-    padding: 15px;
-
-    border-radius: 14px;
-
-    cursor: pointer;
-
-    font-weight: 700;
+.term-button{
+    border:2px solid var(--border);
+    background:white;
+    color:var(--green);
+    padding:14px;
+    border-radius:14px;
+    cursor:pointer;
+    font-weight:700;
 }
 
 .term-button.active,
-.term-button:hover {
-    background: var(--green);
-    color: white;
+.term-button:hover{
+    background:var(--green);
+    color:white;
 }
 
-.subject-filter {
-    max-width: 900px;
-
-    margin: 0 auto 30px;
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 8px;
+.subject-filter{
+    max-width:900px;
+    margin:0 auto 30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
 }
 
-.subject-filter button {
-    border: 1px solid #ccd9ce;
-
-    background: white;
-
-    padding: 9px 14px;
-
-    border-radius: 20px;
-
-    cursor: pointer;
+.subject-filter button{
+    border:1px solid #ccd9ce;
+    background:white;
+    padding:8px 13px;
+    border-radius:20px;
+    cursor:pointer;
 }
 
-.subject-filter button.active {
-    background: var(--green);
-    color: white;
+.subject-filter button.active{
+    background:var(--green);
+    color:white;
 }
 
-.activity-list {
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(270px, 1fr));
-
-    gap: 20px;
+.activity-list{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:20px;
 }
 
-.activity-card {
-    background: white;
-
-    padding: 25px;
-
-    border-radius: 20px;
-
-    box-shadow: var(--shadow);
+.activity-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
 }
 
-.tag {
-    display: inline-block;
-
-    background: var(--light-green);
-
-    color: var(--green);
-
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    font-size: 11px;
-
-    font-weight: bold;
-
-    margin-bottom: 12px;
+.tag{
+    display:inline-block;
+    background:var(--light);
+    color:var(--green);
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:12px;
 }
 
-.activity-card h3 {
-    color: var(--green);
-    margin-bottom: 8px;
+.activity-card h3{
+    color:var(--green);
+    margin-bottom:8px;
 }
 
-.activity-card p {
-    color: var(--gray);
-    margin-bottom: 18px;
+.activity-card p{
+    color:var(--gray);
+    margin-bottom:18px;
 }
 
+/* RESOURCES */
 
-/* =========================
-   RESOURCES
-========================= */
-
-.resources {
-    background: white;
+.resources{
+    background:white;
 }
 
-.resource-grid {
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(230px, 1fr));
-
-    gap: 20px;
+.resource-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.resource {
-    border: 1px solid var(--border);
-
-    border-radius: 20px;
-
-    padding: 25px;
+.resource{
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
+    background:white;
 }
 
-.resource h3 {
-    color: var(--green);
-    margin-bottom: 8px;
+.resource-icon{
+    font-size:40px;
+    margin-bottom:10px;
 }
 
-.resource p {
-    color: var(--gray);
+.resource h3{
+    color:var(--green);
+    margin-bottom:8px;
 }
 
-
-/* =========================
-   TEACHER
-========================= */
-
-.teacher {
-    background: var(--light-green);
+.resource p{
+    color:var(--gray);
+    margin-bottom:15px;
 }
 
-.teacher-box {
-    max-width: 850px;
+/* TEACHER */
 
-    margin: auto;
-
-    background: white;
-
-    border-radius: 30px;
-
-    padding: 45px 30px;
-
-    text-align: center;
-
-    box-shadow: var(--shadow);
+.teacher{
+    background:var(--light);
 }
 
-
-/* TEACHER PHOTO */
-
-.teacher-avatar {
-    width: 190px;
-    height: 190px;
-
-    margin: 0 auto 25px;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-
-    border: 6px solid var(--light-green);
-
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+.teacher-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    border-radius:30px;
+    padding:45px 30px;
+    text-align:center;
+    box-shadow:var(--shadow);
 }
 
-.teacher-avatar img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
+.teacher-avatar{
+    width:190px;
+    height:190px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    overflow:hidden;
+    border:6px solid var(--light);
+    box-shadow:0 6px 20px rgba(0,0,0,.15);
 }
 
-.teacher-box h2 {
-    color: var(--green);
-
-    font-size: 30px;
-
-    margin-bottom: 5px;
+.teacher-avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-.teacher-position {
-    color: var(--green);
-
-    font-weight: 700;
-
-    margin-bottom: 20px;
+.teacher-box h2{
+    color:var(--green);
+    font-size:30px;
 }
 
-.teacher-message {
-    max-width: 650px;
-
-    margin: auto;
-
-    color: var(--gray);
-
-    font-size: 17px;
+.teacher-position{
+    color:var(--green);
+    font-weight:700;
+    margin-bottom:20px;
 }
 
-
-/* =========================
-   MOTTO
-========================= */
-
-.motto {
-    background: var(--green);
-
-    color: white;
-
-    text-align: center;
+.teacher-message{
+    max-width:650px;
+    margin:auto;
+    color:var(--gray);
+    font-size:17px;
 }
 
-.motto h2 {
-    color: var(--yellow);
+/* MOTTO */
 
-    font-size: 34px;
-
-    margin-bottom: 8px;
+.motto{
+    background:var(--green);
+    color:white;
+    text-align:center;
 }
 
-
-/* =========================
-   MODAL
-========================= */
-
-.modal {
-    display: none;
-
-    position: fixed;
-
-    inset: 0;
-
-    background: rgba(0,0,0,0.65);
-
-    z-index: 2000;
-
-    padding: 20px;
-
-    overflow: auto;
+.motto h2{
+    color:var(--yellow);
+    font-size:34px;
+    margin-bottom:8px;
 }
 
-.modal-content {
-    max-width: 700px;
+/* MODAL */
 
-    margin: 50px auto;
-
-    background: white;
-
-    border-radius: 25px;
-
-    padding: 35px;
-
-    position: relative;
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:2000;
+    padding:20px;
+    overflow:auto;
 }
 
-.close {
-    position: absolute;
-
-    right: 20px;
-
-    top: 15px;
-
-    border: none;
-
-    background: none;
-
-    font-size: 28px;
-
-    cursor: pointer;
+.modal-content{
+    max-width:700px;
+    margin:50px auto;
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    position:relative;
 }
 
-.modal-content h2 {
-    color: var(--green);
-
-    margin-bottom: 10px;
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
 }
 
-.option {
-    display: block;
-
-    width: 100%;
-
-    text-align: left;
-
-    padding: 13px;
-
-    margin: 10px 0;
-
-    border: 1px solid var(--border);
-
-    background: white;
-
-    border-radius: 10px;
-
-    cursor: pointer;
+.modal-content h2{
+    color:var(--green);
+    margin-bottom:10px;
 }
 
-.option:hover {
-    background: var(--light-green);
+.option{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding:13px;
+    margin:10px 0;
+    border:1px solid var(--border);
+    background:white;
+    border-radius:10px;
+    cursor:pointer;
 }
 
-.correct {
-    background: #bce7c6 !important;
+.option:hover{
+    background:var(--light);
 }
 
-.wrong {
-    background: #f3c4c4 !important;
+.correct{
+    background:#bce7c6!important;
 }
 
-.feedback {
-    margin-top: 15px;
-
-    font-weight: bold;
+.wrong{
+    background:#f3c4c4!important;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: var(--dark-green);
-
-    color: white;
-
-    text-align: center;
-
-    padding: 35px 20px;
+.feedback{
+    margin-top:15px;
+    font-weight:bold;
 }
 
-footer strong {
-    color: var(--yellow);
+/* FOOTER */
+
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
 }
 
+footer strong{
+    color:var(--yellow);
+}
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
-@media (max-width: 700px) {
+@media(max-width:900px){
 
-    nav {
-        flex-direction: column;
-        gap: 10px;
+    .quick-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .nav-links {
-        justify-content: center;
+    .subject-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .term-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .term-selector {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 55px 5%;
-    }
-
-    .teacher-avatar {
-        width: 150px;
-        height: 150px;
-    }
-
-    .teacher-box h2 {
-        font-size: 24px;
-    }
-
-    .modal-content {
-        margin: 20px auto;
-        padding: 25px;
+    .resource-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
+@media(max-width:650px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .nav-links{
+        justify-content:center;
+    }
+
+    .quick-grid,
+    .term-grid,
+    .subject-grid,
+    .resource-grid{
+        grid-template-columns:1fr;
+    }
+
+    .term-selector{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 5%;
+    }
+
+    .teacher-avatar{
+        width:155px;
+        height:155px;
+    }
+
+    .teacher-box h2{
+        font-size:24px;
+    }
+}
 </style>
-
 </head>
 
 
 <body>
 
-
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -813,54 +645,31 @@ footer strong {
 
 <div class="nav-links">
 
-<button onclick="go('home')">
-Home
-</button>
-
-<button onclick="go('terms')">
-Terms
-</button>
-
-<button onclick="go('learning')">
-Learning Areas
-</button>
-
-<button onclick="go('activities')">
-Activities
-</button>
-
-<button onclick="go('resources')">
-Resources
-</button>
-
-<button onclick="go('teacher')">
-Teacher
-</button>
+<button onclick="go('home')">Home</button>
+<button onclick="go('terms')">Terms</button>
+<button onclick="go('learning')">Learning</button>
+<button onclick="go('activities')">Activities</button>
+<button onclick="go('resources')">Resources</button>
+<button onclick="go('teacher')">Teacher</button>
 
 </div>
 
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
-<div class="rambutan">
+<div class="hero-icon">
 🌱
 </div>
 
-<h1>
-RAMBUTAN
-</h1>
+<h1>RAMBUTAN</h1>
 
-<h2>
-Grade 2 Digital Learning Hub
-</h2>
+<h2>Grade 2 Digital Learning Hub</h2>
 
 <p>
 Welcome, young learners!
@@ -868,12 +677,8 @@ Explore, practice, play, and learn
 with your Grade 2 Rambutan family.
 </p>
 
-<button
-class="btn primary"
-onclick="go('terms')">
-
+<button class="btn primary" onclick="go('terms')">
 📚 START LEARNING
-
 </button>
 
 </div>
@@ -881,21 +686,15 @@ onclick="go('terms')">
 </section>
 
 
-<!-- =========================
-     WELCOME
-========================= -->
+<!-- QUICK ACCESS -->
 
 <section>
 
 <div class="section-title">
 
-<h2>
-🌟 Welcome, Rambutan Learners!
-</h2>
+<h2>🌟 Quick Access</h2>
 
-<p>
-Choose what you want to explore today.
-</p>
+<p>Choose what you want to explore today.</p>
 
 </div>
 
@@ -903,17 +702,15 @@ Choose what you want to explore today.
 <div class="quick-grid">
 
 
-<div
-class="quick-card"
-onclick="go('terms')">
+<!-- MY LEARNING -->
+
+<div class="quick-card" onclick="go('terms')">
 
 <div class="quick-icon">
 📚
 </div>
 
-<h3>
-My Learning
-</h3>
+<h3>My Learning</h3>
 
 <p>
 Explore our three learning terms.
@@ -922,36 +719,32 @@ Explore our three learning terms.
 </div>
 
 
-<div
-class="quick-card"
-onclick="go('activities')">
+<!-- ACTIVITIES -->
+
+<div class="quick-card" onclick="go('activities')">
 
 <div class="quick-icon">
 🎮
 </div>
 
-<h3>
-Activities
-</h3>
+<h3>Activities</h3>
 
 <p>
-Practice through fun activities.
+Practice through fun learning games.
 </p>
 
 </div>
 
 
-<div
-class="quick-card"
-onclick="go('resources')">
+<!-- RESOURCES -->
+
+<div class="quick-card" onclick="go('resources')">
 
 <div class="quick-icon">
 📁
 </div>
 
-<h3>
-Resources
-</h3>
+<h3>Resources</h3>
 
 <p>
 Find worksheets and learning materials.
@@ -960,17 +753,17 @@ Find worksheets and learning materials.
 </div>
 
 
-<div
-class="quick-card"
-onclick="go('teacher')">
+<!-- MY TEACHER WITH PHOTO -->
+
+<div class="quick-card" onclick="go('teacher')">
 
 <div class="quick-icon">
-👨‍🏫
+
+<img src="sir-sonny.jpg" alt="Sir Sonny">
+
 </div>
 
-<h3>
-My Teacher
-</h3>
+<h3>My Teacher</h3>
 
 <p>
 Meet Sir Sonny.
@@ -984,19 +777,13 @@ Meet Sir Sonny.
 </section>
 
 
-<!-- =========================
-     TERMS
-========================= -->
+<!-- TERMS -->
 
-<section
-class="term-section"
-id="terms">
+<section class="term-section" id="terms">
 
 <div class="section-title">
 
-<h2>
-📅 Our Three Learning Terms
-</h2>
+<h2>📅 Our Three Learning Terms</h2>
 
 <p>
 Choose a term to explore lessons and activities.
@@ -1008,17 +795,11 @@ Choose a term to explore lessons and activities.
 <div class="term-grid">
 
 
-<div
-class="term-card"
-onclick="chooseTerm(1)">
+<div class="term-card" onclick="chooseTerm(1)">
 
-<div class="term-number">
-1
-</div>
+<div class="term-number">1</div>
 
-<h3>
-Term 1
-</h3>
+<h3>Term 1</h3>
 
 <p>
 Let's begin our learning journey!
@@ -1027,17 +808,11 @@ Let's begin our learning journey!
 </div>
 
 
-<div
-class="term-card"
-onclick="chooseTerm(2)">
+<div class="term-card" onclick="chooseTerm(2)">
 
-<div class="term-number">
-2
-</div>
+<div class="term-number">2</div>
 
-<h3>
-Term 2
-</h3>
+<h3>Term 2</h3>
 
 <p>
 Let's practice and discover more!
@@ -1046,17 +821,11 @@ Let's practice and discover more!
 </div>
 
 
-<div
-class="term-card"
-onclick="chooseTerm(3)">
+<div class="term-card" onclick="chooseTerm(3)">
 
-<div class="term-number">
-3
-</div>
+<div class="term-number">3</div>
 
-<h3>
-Term 3
-</h3>
+<h3>Term 3</h3>
 
 <p>
 Let's apply what we have learned!
@@ -1070,17 +839,13 @@ Let's apply what we have learned!
 </section>
 
 
-<!-- =========================
-     LEARNING AREAS
-========================= -->
+<!-- LEARNING AREAS -->
 
 <section id="learning">
 
 <div class="section-title">
 
-<h2>
-📚 Learning Areas
-</h2>
+<h2>📚 Learning Areas</h2>
 
 <p>
 Choose a subject to explore.
@@ -1092,97 +857,57 @@ Choose a subject to explore.
 <div class="subject-grid">
 
 
-<div
-class="subject-card"
-onclick="chooseSubject('Filipino')">
+<div class="subject-card" onclick="chooseSubject('Filipino')">
 
-<div class="subject-icon">
-🇵🇭
-</div>
+<div class="subject-icon">🇵🇭</div>
 
-<h3>
-Filipino
-</h3>
+<h3>Filipino</h3>
 
-<p>
-Wika, pagbasa at pagsulat
-</p>
+<p>Wika, pagbasa at pagsulat</p>
 
 </div>
 
 
-<div
-class="subject-card"
-onclick="chooseSubject('English')">
+<div class="subject-card" onclick="chooseSubject('English')">
 
-<div class="subject-icon">
-🔤
-</div>
+<div class="subject-icon">🔤</div>
 
-<h3>
-English
-</h3>
+<h3>English</h3>
 
-<p>
-Reading, language and communication
-</p>
+<p>Reading and communication</p>
 
 </div>
 
 
-<div
-class="subject-card"
-onclick="chooseSubject('Mathematics')">
+<div class="subject-card" onclick="chooseSubject('Mathematics')">
 
-<div class="subject-icon">
-🔢
-</div>
+<div class="subject-icon">🔢</div>
 
-<h3>
-Mathematics
-</h3>
+<h3>Mathematics</h3>
 
-<p>
-Numbers and problem solving
-</p>
+<p>Numbers and problem solving</p>
 
 </div>
 
 
-<div
-class="subject-card"
-onclick="chooseSubject('Makabansa')">
+<div class="subject-card" onclick="chooseSubject('Makabansa')">
 
-<div class="subject-icon">
-🌏
-</div>
+<div class="subject-icon">🌏</div>
 
-<h3>
-Makabansa
-</h3>
+<h3>Makabansa</h3>
 
-<p>
-Self, family, community and country
-</p>
+<p>Self, family and community</p>
 
 </div>
 
 
-<div
-class="subject-card"
-onclick="chooseSubject('GMRC')">
+<div class="subject-card" onclick="chooseSubject('GMRC')">
 
-<div class="subject-icon">
-❤️
-</div>
+<div class="subject-icon">❤️</div>
 
-<h3>
-GMRC
-</h3>
+<h3>GMRC</h3>
 
-<p>
-Good manners and right conduct
-</p>
+<p>Good manners and values</p>
 
 </div>
 
@@ -1192,19 +917,13 @@ Good manners and right conduct
 </section>
 
 
-<!-- =========================
-     ACTIVITIES
-========================= -->
+<!-- ACTIVITIES -->
 
-<section
-class="activities"
-id="activities">
+<section class="activities" id="activities">
 
 <div class="section-title">
 
-<h2>
-🎮 Learning Activities
-</h2>
+<h2>🎮 Learning Activities</h2>
 
 <p>
 Select a term and learning area.
@@ -1215,30 +934,16 @@ Select a term and learning area.
 
 <div class="term-selector">
 
-<button
-class="term-button active"
-onclick="setTerm(1,this)">
-
+<button class="term-button active" onclick="setTerm(1,this)">
 Term 1
-
 </button>
 
-
-<button
-class="term-button"
-onclick="setTerm(2,this)">
-
+<button class="term-button" onclick="setTerm(2,this)">
 Term 2
-
 </button>
 
-
-<button
-class="term-button"
-onclick="setTerm(3,this)">
-
+<button class="term-button" onclick="setTerm(3,this)">
 Term 3
-
 </button>
 
 </div>
@@ -1246,52 +951,28 @@ Term 3
 
 <div class="subject-filter">
 
-<button
-class="active"
-onclick="setSubject('All',this)">
-
+<button class="active" onclick="setSubject('All',this)">
 All
-
 </button>
 
-
-<button
-onclick="setSubject('Filipino',this)">
-
+<button onclick="setSubject('Filipino',this)">
 Filipino
-
 </button>
 
-
-<button
-onclick="setSubject('English',this)">
-
+<button onclick="setSubject('English',this)">
 English
-
 </button>
 
-
-<button
-onclick="setSubject('Mathematics',this)">
-
+<button onclick="setSubject('Mathematics',this)">
 Mathematics
-
 </button>
 
-
-<button
-onclick="setSubject('Makabansa',this)">
-
+<button onclick="setSubject('Makabansa',this)">
 Makabansa
-
 </button>
 
-
-<button
-onclick="setSubject('GMRC',this)">
-
+<button onclick="setSubject('GMRC',this)">
 GMRC
-
 </button>
 
 </div>
@@ -1300,259 +981,181 @@ GMRC
 <div class="activity-list">
 
 
-<!-- TERM 1 -->
-
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="1"
 data-subject="Filipino">
 
-<span class="tag">
-TERM 1 • FILIPINO
-</span>
+<span class="tag">TERM 1 • FILIPINO</span>
 
-<h3>
-📖 Pantig Detective
-</h3>
+<h3>📖 Pantig Detective</h3>
 
 <p>
 Practice identifying syllables in Filipino words.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('pantig')">
-
 Start
-
 </button>
 
 </div>
 
 
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="1"
 data-subject="English">
 
-<span class="tag">
-TERM 1 • ENGLISH
-</span>
+<span class="tag">TERM 1 • ENGLISH</span>
 
-<h3>
-🔤 Word Detective
-</h3>
+<h3>🔤 Word Detective</h3>
 
 <p>
 Find the word that matches the description.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('word')">
-
 Start
-
 </button>
 
 </div>
 
 
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="1"
 data-subject="Mathematics">
 
-<span class="tag">
-TERM 1 • MATHEMATICS
-</span>
+<span class="tag">TERM 1 • MATHEMATICS</span>
 
-<h3>
-🔢 Number Challenge
-</h3>
+<h3>🔢 Number Challenge</h3>
 
 <p>
 Practice numbers and basic operations.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('math')">
-
 Start
-
 </button>
 
 </div>
 
 
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="1"
 data-subject="Makabansa">
 
-<span class="tag">
-TERM 1 • MAKABANSA
-</span>
+<span class="tag">TERM 1 • MAKABANSA</span>
 
-<h3>
-🌏 My Community
-</h3>
+<h3>🌏 My Community</h3>
 
 <p>
 Learn about people and places in your community.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('community')">
-
 Start
-
 </button>
 
 </div>
 
 
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="1"
 data-subject="GMRC">
 
-<span class="tag">
-TERM 1 • GMRC
-</span>
+<span class="tag">TERM 1 • GMRC</span>
 
-<h3>
-❤️ Good Choice
-</h3>
+<h3>❤️ Good Choice</h3>
 
 <p>
 Choose the kind and responsible action.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('gmrc')">
-
 Start
-
 </button>
 
 </div>
 
 
-<!-- TERM 2 -->
-
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="2"
 data-subject="Mathematics">
 
-<span class="tag">
-TERM 2 • MATHEMATICS
-</span>
+<span class="tag">TERM 2 • MATHEMATICS</span>
 
-<h3>
-🧮 Math Explorer
-</h3>
+<h3>🧮 Math Explorer</h3>
 
 <p>
 Solve a mathematical challenge.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('math2')">
-
 Start
-
 </button>
 
 </div>
 
 
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="2"
 data-subject="English">
 
-<span class="tag">
-TERM 2 • ENGLISH
-</span>
+<span class="tag">TERM 2 • ENGLISH</span>
 
-<h3>
-📚 Reading Explorer
-</h3>
+<h3>📚 Reading Explorer</h3>
 
 <p>
 Read and answer a simple question.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('reading')">
-
 Start
-
 </button>
 
 </div>
 
 
-<!-- TERM 3 -->
-
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="3"
 data-subject="Filipino">
 
-<span class="tag">
-TERM 3 • FILIPINO
-</span>
+<span class="tag">TERM 3 • FILIPINO</span>
 
-<h3>
-✏️ Salita Challenge
-</h3>
+<h3>✏️ Salita Challenge</h3>
 
 <p>
 Practice identifying the correct Filipino word.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('salita')">
-
 Start
-
 </button>
 
 </div>
 
 
-<div
-class="activity-card"
+<div class="activity-card"
 data-term="3"
 data-subject="GMRC">
 
-<span class="tag">
-TERM 3 • GMRC
-</span>
+<span class="tag">TERM 3 • GMRC</span>
 
-<h3>
-❤️ Kindness Challenge
-</h3>
+<h3>❤️ Kindness Challenge</h3>
 
 <p>
 Think about how you can help others.
 </p>
 
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="activity('kindness')">
-
 Start
-
 </button>
 
 </div>
@@ -1563,19 +1166,13 @@ Start
 </section>
 
 
-<!-- =========================
-     RESOURCES
-========================= -->
+<!-- RESOURCES -->
 
-<section
-class="resources"
-id="resources">
+<section class="resources" id="resources">
 
 <div class="section-title">
 
-<h2>
-📁 Learning Resources
-</h2>
+<h2>📁 Learning Resources</h2>
 
 <p>
 Your teacher can place downloadable files here.
@@ -1589,22 +1186,17 @@ Your teacher can place downloadable files here.
 
 <div class="resource">
 
-<h3>
-📄 Activity Sheets
-</h3>
+<div class="resource-icon">📄</div>
+
+<h3>Activity Sheets</h3>
 
 <p>
 Printable worksheets and practice activities.
 </p>
 
-<br>
-
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="resourceMessage()">
-
 Open
-
 </button>
 
 </div>
@@ -1612,22 +1204,17 @@ Open
 
 <div class="resource">
 
-<h3>
-📚 Lesson Materials
-</h3>
+<div class="resource-icon">📚</div>
+
+<h3>Lesson Materials</h3>
 
 <p>
 Learning materials prepared for Rambutan learners.
 </p>
 
-<br>
-
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="resourceMessage()">
-
 Open
-
 </button>
 
 </div>
@@ -1635,22 +1222,17 @@ Open
 
 <div class="resource">
 
-<h3>
-📖 Reading Corner
-</h3>
+<div class="resource-icon">📖</div>
+
+<h3>Reading Corner</h3>
 
 <p>
 Stories and reading materials.
 </p>
 
-<br>
-
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="resourceMessage()">
-
 Read
-
 </button>
 
 </div>
@@ -1658,22 +1240,17 @@ Read
 
 <div class="resource">
 
-<h3>
-🎥 Learning Videos
-</h3>
+<div class="resource-icon">🎥</div>
+
+<h3>Learning Videos</h3>
 
 <p>
 Teacher-selected videos for learning.
 </p>
 
-<br>
-
-<button
-class="btn secondary"
+<button class="btn secondary"
 onclick="resourceMessage()">
-
 Watch
-
 </button>
 
 </div>
@@ -1684,19 +1261,13 @@ Watch
 </section>
 
 
-<!-- =========================
-     TEACHER
-========================= -->
+<!-- TEACHER -->
 
-<section
-class="teacher"
-id="teacher">
+<section class="teacher" id="teacher">
 
 <div class="section-title">
 
-<h2>
-👨‍🏫 Your Teacher
-</h2>
+<h2>👨‍🏫 Your Class Adviser</h2>
 
 </div>
 
@@ -1706,8 +1277,7 @@ id="teacher">
 
 <div class="teacher-avatar">
 
-<img
-src="sir-sonny.jpg"
+<img src="sir-sonny.jpg"
 alt="Sir Sonny, Jr. L. Reño">
 
 </div>
@@ -1730,27 +1300,27 @@ Let's learn, explore, help one another,
 and grow together.
 
 Remember:
-every learner can learn,
-every learner can grow,
-and every learner can shine.
+
+<br><br>
+
+<strong>
+Every learner can learn.
+Every learner can grow.
+Every learner can shine.
+</strong>
 
 </p>
-
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     MOTTO
-========================= -->
+<!-- MOTTO -->
 
 <section class="motto">
 
-<h2>
-🌱 Grow, Learn, Shine!
-</h2>
+<h2>🌱 Grow • Learn • Shine</h2>
 
 <p>
 Learn with curiosity • Grow with kindness •
@@ -1760,33 +1330,21 @@ Shine with confidence
 </section>
 
 
-<!-- =========================
-     ACTIVITY MODAL
-========================= -->
+<!-- ACTIVITY MODAL -->
 
-<div
-class="modal"
-id="modal">
+<div class="modal" id="modal">
 
 <div class="modal-content">
 
-<button
-class="close"
-onclick="closeModal()">
-
-×
-</button>
-
+<button class="close" onclick="closeModal()">×</button>
 
 <h2 id="modalTitle">
 Activity
 </h2>
 
-
 <p id="modalInstruction">
 Choose the best answer.
 </p>
-
 
 <div id="question"></div>
 
@@ -1795,9 +1353,7 @@ Choose the best answer.
 </div>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1808,8 +1364,7 @@ Grade 2 – Rambutan Digital Learning Hub
 </p>
 
 <p>
-Class Adviser:
-Sir Sonny, Jr. L. Reño
+Class Adviser: Sir Sonny, Jr. L. Reño
 </p>
 
 <br>
@@ -1823,69 +1378,57 @@ Sir Sonny, Jr. L. Reño
 
 <script>
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
-function go(id) {
+function go(id){
 
-    document
-        .getElementById(id)
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    document.getElementById(id)
+    .scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
 
-/* =========================
-   SETTINGS
-========================= */
+/* SETTINGS */
 
 let currentTerm = 1;
-
 let currentSubject = "All";
 
 
-/* =========================
-   CHOOSE TERM
-========================= */
+/* TERM */
 
-function chooseTerm(term) {
+function chooseTerm(term){
 
     currentTerm = term;
 
     go("activities");
 
     document
-        .querySelectorAll(".term-button")
-        .forEach((button, index) => {
+    .querySelectorAll(".term-button")
+    .forEach((button,index)=>{
 
-            button.classList.toggle(
-                "active",
-                index === term - 1
-            );
+        button.classList.toggle(
+            "active",
+            index === term-1
+        );
 
-        });
+    });
 
     filterActivities();
 
 }
 
 
-/* =========================
-   SET TERM
-========================= */
-
-function setTerm(term, button) {
+function setTerm(term,button){
 
     currentTerm = term;
 
     document
-        .querySelectorAll(".term-button")
-        .forEach(btn =>
-            btn.classList.remove("active")
-        );
+    .querySelectorAll(".term-button")
+    .forEach(btn=>{
+        btn.classList.remove("active");
+    });
 
     button.classList.add("active");
 
@@ -1894,50 +1437,40 @@ function setTerm(term, button) {
 }
 
 
-/* =========================
-   CHOOSE SUBJECT
-========================= */
+/* SUBJECT */
 
-function chooseSubject(subject) {
+function chooseSubject(subject){
 
     currentSubject = subject;
 
     go("activities");
 
     document
-        .querySelectorAll(".subject-filter button")
-        .forEach(button => {
+    .querySelectorAll(".subject-filter button")
+    .forEach(button=>{
 
-            button.classList.remove("active");
+        button.classList.remove("active");
 
-            if (
-                button.textContent.trim() === subject
-            ) {
+        if(button.textContent.trim() === subject){
+            button.classList.add("active");
+        }
 
-                button.classList.add("active");
-
-            }
-
-        });
+    });
 
     filterActivities();
 
 }
 
 
-/* =========================
-   SET SUBJECT
-========================= */
-
-function setSubject(subject, button) {
+function setSubject(subject,button){
 
     currentSubject = subject;
 
     document
-        .querySelectorAll(".subject-filter button")
-        .forEach(btn =>
-            btn.classList.remove("active")
-        );
+    .querySelectorAll(".subject-filter button")
+    .forEach(btn=>{
+        btn.classList.remove("active");
+    });
 
     button.classList.add("active");
 
@@ -1946,240 +1479,180 @@ function setSubject(subject, button) {
 }
 
 
-/* =========================
-   FILTER ACTIVITIES
-========================= */
+/* FILTER */
 
-function filterActivities() {
+function filterActivities(){
 
     document
-        .querySelectorAll(".activity-card")
-        .forEach(card => {
+    .querySelectorAll(".activity-card")
+    .forEach(card=>{
 
-            let termMatch =
-                Number(card.dataset.term) === currentTerm;
+        let termMatch =
+        Number(card.dataset.term) === currentTerm;
 
-            let subjectMatch =
-                currentSubject === "All" ||
-                card.dataset.subject === currentSubject;
+        let subjectMatch =
+        currentSubject === "All" ||
+        card.dataset.subject === currentSubject;
 
-            card.style.display =
-                termMatch && subjectMatch
-                ? "block"
-                : "none";
+        card.style.display =
+        termMatch && subjectMatch
+        ? "block"
+        : "none";
 
-        });
+    });
 
 }
 
 
-/* =========================
-   ACTIVITIES
-========================= */
+/* ACTIVITIES */
 
 const activities = {
 
-    pantig: {
+pantig:{
+title:"📖 Pantig Detective",
+instruction:"Ano ang tamang paghahati sa pantig ng salitang BATA?",
+options:[
+["ba-ta",true],
+["bat-a",false],
+["b-ata",false]
+]
+},
 
-        title: "📖 Pantig Detective",
+word:{
+title:"🔤 Word Detective",
+instruction:"Which word is an animal?",
+options:[
+["Table",false],
+["Dog",true],
+["Pencil",false]
+]
+},
 
-        instruction:
-            "Ano ang tamang paghahati sa pantig ng salitang BATA?",
+math:{
+title:"🔢 Number Challenge",
+instruction:"What is 8 + 7?",
+options:[
+["13",false],
+["15",true],
+["17",false]
+]
+},
 
-        options: [
-            ["ba-ta", true],
-            ["bat-a", false],
-            ["b-ata", false]
-        ]
+community:{
+title:"🌏 My Community",
+instruction:"Who helps keep the community safe?",
+options:[
+["Police officer",true],
+["Baby",false],
+["Pupil",false]
+]
+},
 
-    },
+gmrc:{
+title:"❤️ Good Choice",
+instruction:"You found a pencil belonging to your classmate. What should you do?",
+options:[
+["Keep it",false],
+["Hide it",false],
+["Return it",true]
+]
+},
 
+math2:{
+title:"🧮 Math Explorer",
+instruction:"What is 20 + 10?",
+options:[
+["20",false],
+["30",true],
+["40",false]
+]
+},
 
-    word: {
+reading:{
+title:"📚 Reading Explorer",
+instruction:"Ana has a red ball. What does Ana have?",
+options:[
+["A blue bag",false],
+["A red ball",true],
+["A yellow book",false]
+]
+},
 
-        title: "🔤 Word Detective",
+salita:{
+title:"✏️ Salita Challenge",
+instruction:"Alin ang pangalan ng isang hayop?",
+options:[
+["Aso",true],
+["Mesa",false],
+["Bahay",false]
+]
+},
 
-        instruction:
-            "Which word is an animal?",
-
-        options: [
-            ["Table", false],
-            ["Dog", true],
-            ["Pencil", false]
-        ]
-
-    },
-
-
-    math: {
-
-        title: "🔢 Number Challenge",
-
-        instruction:
-            "What is 8 + 7?",
-
-        options: [
-            ["13", false],
-            ["15", true],
-            ["17", false]
-        ]
-
-    },
-
-
-    community: {
-
-        title: "🌏 My Community",
-
-        instruction:
-            "Who helps keep the community safe?",
-
-        options: [
-            ["Police officer", true],
-            ["Baby", false],
-            ["Pupil", false]
-        ]
-
-    },
-
-
-    gmrc: {
-
-        title: "❤️ Good Choice",
-
-        instruction:
-            "You found a pencil belonging to your classmate. What should you do?",
-
-        options: [
-            ["Keep it", false],
-            ["Hide it", false],
-            ["Return it", true]
-        ]
-
-    },
-
-
-    math2: {
-
-        title: "🧮 Math Explorer",
-
-        instruction:
-            "What is 20 + 10?",
-
-        options: [
-            ["20", false],
-            ["30", true],
-            ["40", false]
-        ]
-
-    },
-
-
-    reading: {
-
-        title: "📚 Reading Explorer",
-
-        instruction:
-            "Ana has a red ball. What does Ana have?",
-
-        options: [
-            ["A blue bag", false],
-            ["A red ball", true],
-            ["A yellow book", false]
-        ]
-
-    },
-
-
-    salita: {
-
-        title: "✏️ Salita Challenge",
-
-        instruction:
-            "Alin ang pangalan ng isang hayop?",
-
-        options: [
-            ["Aso", true],
-            ["Mesa", false],
-            ["Bahay", false]
-        ]
-
-    },
-
-
-    kindness: {
-
-        title: "❤️ Kindness Challenge",
-
-        instruction:
-            "Your classmate is having difficulty with an activity. What can you do?",
-
-        options: [
-            ["Laugh at them", false],
-            ["Ignore them", false],
-            ["Help and encourage them", true]
-        ]
-
-    }
+kindness:{
+title:"❤️ Kindness Challenge",
+instruction:"Your classmate is having difficulty with an activity. What can you do?",
+options:[
+["Laugh at them",false],
+["Ignore them",false],
+["Help and encourage them",true]
+]
+}
 
 };
 
 
-/* =========================
-   OPEN ACTIVITY
-========================= */
+/* OPEN ACTIVITY */
 
-function activity(type) {
+function activity(type){
 
     let a = activities[type];
 
-    document
-        .getElementById("modalTitle")
-        .textContent = a.title;
+    document.getElementById("modalTitle")
+    .textContent = a.title;
 
-    document
-        .getElementById("modalInstruction")
-        .textContent = a.instruction;
+    document.getElementById("modalInstruction")
+    .textContent = a.instruction;
 
     let q =
-        document.getElementById("question");
+    document.getElementById("question");
 
-    q.innerHTML = "";
+    q.innerHTML="";
 
-    a.options.forEach(option => {
+    a.options.forEach(option=>{
 
         let button =
-            document.createElement("button");
+        document.createElement("button");
 
-        button.className = "option";
+        button.className="option";
 
-        button.textContent = option[0];
+        button.textContent=option[0];
 
-        button.onclick = function() {
+        button.onclick=function(){
 
-            if (button.dataset.done)
+            if(button.dataset.done){
                 return;
+            }
 
-            button.dataset.done = "true";
+            button.dataset.done="true";
 
             let feedback =
-                document.createElement("div");
+            document.createElement("div");
 
-            feedback.className = "feedback";
+            feedback.className="feedback";
 
-            if (option[1]) {
+            if(option[1]){
 
                 button.classList.add("correct");
 
                 feedback.textContent =
-                    "🎉 Excellent! Great job!";
+                "🎉 Excellent! Great job!";
 
-            } else {
+            }else{
 
                 button.classList.add("wrong");
 
                 feedback.textContent =
-                    "😊 Nice try! Keep thinking!";
+                "😊 Nice try! Keep thinking!";
 
             }
 
@@ -2191,31 +1664,25 @@ function activity(type) {
 
     });
 
-    document
-        .getElementById("modal")
-        .style.display = "block";
+    document.getElementById("modal")
+    .style.display="block";
 
 }
 
 
-/* =========================
-   CLOSE MODAL
-========================= */
+/* CLOSE */
 
-function closeModal() {
+function closeModal(){
 
-    document
-        .getElementById("modal")
-        .style.display = "none";
+    document.getElementById("modal")
+    .style.display="none";
 
 }
 
 
-/* =========================
-   RESOURCE MESSAGE
-========================= */
+/* RESOURCES */
 
-function resourceMessage() {
+function resourceMessage(){
 
     alert(
         "📚 Your teacher's learning resources will appear here."
@@ -2224,33 +1691,25 @@ function resourceMessage() {
 }
 
 
-/* =========================
-   CLOSE MODAL OUTSIDE
-========================= */
+/* CLICK OUTSIDE MODAL */
 
-window.onclick = function(event) {
+window.onclick=function(event){
 
     let modal =
-        document.getElementById("modal");
+    document.getElementById("modal");
 
-    if (event.target === modal) {
-
+    if(event.target === modal){
         closeModal();
-
     }
 
 };
 
 
-/* =========================
-   INITIALIZE
-========================= */
+/* INITIALIZE */
 
 filterActivities();
 
 </script>
 
-
 </body>
-
 </html>
